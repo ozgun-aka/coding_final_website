@@ -1,0 +1,233 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 90vw;
+  max-width: clamp(250px, 50vw, 650px);
+  background-color: #ededed;
+  border: 1.4px solid rgb(59, 66, 73);
+  z-index: 10000;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.2rem, 1vw, 1.5rem);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.close-btn {
+  font-family: 'Anybody', sans-serif;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  color: #333;
+  cursor: pointer;
+  padding: 0.3rem 0.3rem;
+  background-color: #f4f4f4;
+  transition: background-color 0.2s ease;
+}
+
+.more-btn {
+  font-family: 'Anybody', sans-serif;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  color: #333;
+  cursor: pointer;
+  padding: 0.3rem 0.3rem;
+  background-color: #f4f4f4;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.more-btn:hover , .close-btn:hover {
+  font-style: italic; 
+  color: #2f96bf;
+}
+
+.modal-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center;
+}
+
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.3rem, 1vw, 0.6rem);
+}
+
+.modal-title {
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+}
+
+.modal-info {
+  font-size: clamp(0.6rem, 2vw, 1.1rem);
+  text-align: right;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .modal-title {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+  }
+  .modal-info {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
+  .close-btn {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-family: 'Anybody', sans-serif;
+  color: rgb(59, 66, 73);
+}
+
+#contact-form label {
+  font-weight: 600;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid rgb(59, 66, 73);
+  border-radius: 4px;  font-family: 'Anybody', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  resize: vertical;
+}
+
+#contact-form button {
+  padding: 0.6rem;
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  background-color: #2f96bf; 
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: #fe5e5e;
+}
+
+#form-status {
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+}
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: transparent; 
+  font-size: 0; 
+}
+
+.social-icons a:hover {
+  filter: none;
+  transform: scale(1.2);
+}
+
+.social-icons img {
+  width: 40px; 
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.social-icons img:hover {
+  filter: brightness(0.7);
+}
+
+.social-icons a img {
+  font-size: initial;
+}
+
+/* Dark mode için */
+.modal.dark {
+  background-color: #272626;
+  border-color: #d1cec3;
+  color: #eae6d9;
+}
+
+
+.modal.dark .close-btn,
+.modal.dark .more-btn {
+  background-color: #333;
+  color: #eee;
+}
+
+.modal.dark .close-btn:hover,
+.modal.dark .more-btn:hover {
+  color: #fc98acdc;
+  font-style: italic;
+}
+
+.modal.dark .modal-info {
+  color: #e4e4e4;
+}
+
+.modal.dark #contact-form input,
+.modal.dark #contact-form textarea {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+.modal.dark #contact-form input::placeholder,
+.modal.dark #contact-form textarea::placeholder {
+  color: #bbb;
+}
+
+.modal.dark #contact-form button {
+  background-color: #a2bbf1;
+  color: #fff;
+}
+
+.modal.dark #contact-form button:hover {
+  background-color: #fc98acdc;
+}
+
+.modal.dark .social-icons a {
+  filter: grayscale(60%);
+}
+
+.modal.dark .social-icons a:hover {
+  filter: none;
+}
+
+.modal.dark .modal-image {
+  background-color: #444;
+}
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Özgün Beste Akaoğlu &#124; Portfolio</title>
+
+    <link rel="icon" type="image/png" href="">
+
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/modals.css" />
+
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=anybody:200,200i,400,400i,500,500i,800,800i"
+      rel="stylesheet"
+    />
+
+  </head>
+
+  <body>
+    <div class="home-page">
+
+        <div class="name-title">
+          <button id="theme-toggle" aria-label="Toggle Dark Mode" type="button">
+            
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"></path>
+            </svg>
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="display:none;">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <p>ÖZGÜN AKAOĞLU</p>
+        </div>
+
+
+      <div class="title-row">
+        <p class="menu-item" data-id="about">About me</p>
+        <p class="menu-item" data-id="arch1"
+          >Architecture 01 <span class="slash">&#47;</span> Building Information
+          Modelling</p
+        >
+        <p class="menu-item" data-id="arch2"
+          >Architecture 02 <span class="slash">&#47;</span> Antoni Gaudi's
+          Architecture</p
+        >
+        <p class="menu-item" data-id="arch3"
+          >Architecture 03 <span class="slash">&#47;</span> Parametric Pavillion
+          Design</p
+        >
+        <p class="menu-item" data-id="photo1"
+          >Photography 01 <span class="slash">&#47;</span> Barcelona</p
+        >
+        <p class="menu-item" data-id="photo2"
+          >Photography 02 <span class="slash">&#47;</span> Amsterdam</p
+        >
+        <p class="menu-item" data-id="photo3"
+          >Photography 03 <span class="slash">&#47;</span> Venice</p
+        >
+        <p class="menu-item" data-id="essay1">Essay 01 <span class="slash">&#47;</span> Picasso and Las Meninas</p>
+        <p class="menu-item" data-id="contact">Contact me</p>
+      </div>
+
+      <p class="watermark-text">&#169; Özgün Beste Akaoğlu &#39;25 </p>
+    </div>
+
+    <script src="scripts/script.js"></script>
+
+    <div class="modal" id="universal-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="more-btn">more</button>
+          <span class="close-btn">close</span>
+        </div>
+
+        <div class="modal-image" id="modal-image"></div>
+
+        <div class="modal-text">
+          <p class="modal-title" id="modal-title">Title</p>
+          <p class="modal-info" id="modal-info">Info</p>
+          
+          <div id="contact-form-container"></div>
+
+          <div class="social-icons">
+            <a href="" target="_blank">
+              <img src="" alt="Twitter" />
+            </a>
+            <a href="" target="_blank">
+              <img src="" alt="LinkedIn" />
+            </a>
+            <a href="" target="_blank">
+              <img src="" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+
+
+        <form id="contact-form" style="display:none;">
+          <label for="sender-email">Your Email:</label>
+          <input
+            type="email"
+            id="sender-email"
+            name="sender-email"
+            placeholder="example@mail.com"
+            required
+          />
+          <label for="message-content">Message:</label>
+          <textarea
+            id="message-content"
+            name="message-content"
+            placeholder="Write your message here..."
+            rows="6"
+            required
+          ></textarea>
+          <button type="submit" id="send-btn">Send</button>
+          <p id="form-status" style="color:#a2bbf1; margin-top: 8px;"></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

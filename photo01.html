@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography 01 - Barcelona</title>
+  <link rel="stylesheet" href="styles/photo01.css" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link href="https://fonts.bunny.net/css?family=anybody:200,200i,400,400i,500,500i,800,800i" rel="stylesheet" />
+</head>
+<body>
+  <div class="home-page">
+    <div class="name-title">
+      <a href="index.html"><p>ÖZGÜN AKAOĞLU</p></a>
+    </div>
+  </div>
+
+  <main class="grid-wrapper">
+    <div class="grid-item" data-index="0">
+      <div class="more">More</div>
+      <div class="photo-box"><img src="images/battlo_2.jpg" alt="Sample 1" /></div>
+      <div class="title">Casa Battlo</div>
+    </div>
+    <div class="grid-item" data-index="1">
+      <div class="more">More</div>
+      <div class="photo-box"><img src="images/mila_1.jpg" alt="Sample 2" /></div>
+      <div class="title">Casa Mila</div>
+    </div>
+    <div class="grid-item" data-index="2">
+      <div class="more">More</div>
+      <div class="photo-box"><img src="images/güell_1.jpg" alt="Sample 3" /></div>
+      <div class="title">Park Güell</div>
+    </div>
+    <div class="grid-item" data-index="3">
+      <div class="more">More</div>
+      <div class="photo-box"><img src="images/sf_3.jpg" alt="Sample 4" /></div>
+      <div class="title">Sagrada Familia</div>
+    </div>
+    <div class="grid-item" data-index="4">
+      <div class="more">More</div>
+      <div class="photo-box"><img src="images/festival_1.jpg" alt="Sample 5" /></div>
+      <div class="title">Fire Festival</div>
+    </div>
+    <div class="grid-item" data-index="5">
+      <div class="more">More</div>
+      <div class="photo-box"><img src="images/street_1.jpg" alt="Sample 6" /></div>
+      <div class="title">Street Details</div>
+    </div>
+  </main>
+
+  <div id="expanded-view" class="hidden">
+    <div class="expanded-content">
+      <div class="close">Close</div>
+      <div class="photo-expanded">
+        <div class="arrow left">&#8592;</div>
+        <img id="expanded-img" src="" alt="Expanded" />
+        <div class="arrow right">&#8594;</div>
+      </div>
+      <div class="title" id="expanded-title"></div>
+    </div>
+  </div>
+
+  <script src="scripts/photo01.js"></script>
+</body>
+</html>
